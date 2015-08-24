@@ -1,0 +1,14 @@
+Q1: How many products match this query?
+Q2: Run the same query, but this time do an explain(). How many documents were examined?
+Q3: Does the explain() output indicate that an index was used?
+
+[ ] Q1: 0
+[ ] Q1: 1
+[ ] Q1: 3
+[x] Q1: 4
+[ ] Q2: 1
+[x] Q2: 4
+[ ] Q2: 5
+[ ] Q2: 12
+[ ] Q3: No
+[x] Q3: Yes
