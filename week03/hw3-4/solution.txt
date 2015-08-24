@@ -1,0 +1,7 @@
+Which of the following are available in WiredTiger but not in MMAPv1? Check all that apply.
+
+[ ] Collection level locking
+[ ] Indexes
+[x] Data compression
+[x] Document level locking
+[ ] Covered Queries
