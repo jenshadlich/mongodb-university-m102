@@ -7,5 +7,5 @@ Note: to get a multiple answer question right in this final you must get all the
 
 [ ] MongoDB (v3.0) supports transactions spanning multiple documents, if those documents all reside on the same shard.
 [x] MongoDB supports atomic operations on individual documents.
-[x] MongoDB allows you to choose the storage engine separately for each collection on your mongod.
+[ ] MongoDB allows you to choose the storage engine separately for each collection on your mongod.
 [x] MongoDB has a data type for binary data.
