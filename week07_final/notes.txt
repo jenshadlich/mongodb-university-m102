@@ -1,0 +1,17 @@
+mkdir data/s1
+mkdir data/s2
+
+mongod --fork --logpath s1.log --smallfiles --oplogSize 50 --port 27501 --dbpath data/s1
+mongod --fork --logpath s2.log --smallfiles --oplogSize 50 --port 27601 --dbpath data/s2
+
+---
+
+mongorestore --host 127.0.0.1 --port 27019 -d config config_server/config/ --verbose
+
+
+db.shards.find()
+{ "_id" : "s1", "host" : "s1/genome_svr1:27501,genome_svr2:27502,genome_svr2:27503" }
+{ "_id" : "s2", "host" : "s2/genome_svr4:27601,genome_svr5:27602,genome_svr5:27603" }
+
+db.shards.update({_id: "s1"} , {$set: {"host" : "localhost:27501"}})
+db.shards.update({_id: "s2"} , {$set: {"host" : "localhost:27601"}})
